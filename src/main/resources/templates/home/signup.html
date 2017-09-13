@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Signup</title>
+</head>
+<body>
+<h1>Let's get registered!</h1>
+<h2><marquee>
+{{ #errorMessage }}
+	{{ errorMessage }}
+{{ /errorMessage }}</marquee></h2>
+
+
+<form method="post" action="/signup">
+	<input type="text" name="username" placeholder="username" required>
+	<br>
+	<input type="password" name="password" placeholder="password" required>
+	<br>
+	<input type="hidden" name="{{ _csrf.parameterName }}" value="{{ _csrf.token }}">
+	<br>
+	<button>Clicky</button>
+</form>
+
+
+</body>
+</html>

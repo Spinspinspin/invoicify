@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class BillingController {
 
 	
-	@GetMapping("/")
+	@GetMapping("")
 	public String login() {
-		return "/billing-record/list";
+		return "billing-record/list";
 	}
 }
